@@ -1,4 +1,5 @@
 from fastapi import FastAPI 
+from mockdata import product
 
 app = FastAPI()
 
@@ -13,5 +14,17 @@ def contact():
 def aboutus():
     return "this is about us page of ours . you ll get all the info about us by reading this page ."
 @app.get("/products")
-def products(): # important function as this will be usefull for mostly all the website like every company has their list of products and all 
-    return "product"
+
+
+
+
+
+# path parameters - q - if product aviable with the id number return the product else return the error message . 
+
+@app.get("/product/{product_id}")
+def products(product_id:int): # important function as this will be usefull for mostly all the website like every company has their list of products and all 
+    
+    
+    return {"id":product_id}
+
+
