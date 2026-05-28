@@ -87,12 +87,12 @@ async def create_product(data:productDTO):
 
 
 
-@app.put("/update_product")
+@app.put("/update_product/{product_id}")
 
-async def update_prodcut(data:productDTO , product_id:int):
-    for index, oneproduct in product:
+async def update_prodcut(product_data:productDTO , product_id:int):
+    for index,oneproduct in enumerate(product):
         if oneproduct.get("id") == product_id:
-            product[index] = data
-            return {"status":"product added successfully"}
+            product[index] = product_data
+            return {"status":"product updated successfully"}
     
     return {"status":"product not found in the list !!!"}
