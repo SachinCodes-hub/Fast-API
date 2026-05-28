@@ -3,26 +3,34 @@ product = [
     {
         "id" : 1,
         "title": "mobilephone",
-        "tango" : "charlie"
+        "price":10000 ,
+        "count": 10
         
     },
     {
         "id" : 2,
         "title": "applemacbook",
-        "tango" : "charlie"
-        
+        "price":10000 ,
+        "count": 10
     },
     {
-        "id" : 8,
+        "id" : 3,
         "title": "landline",
-        "tango" : "charlie"
-        
+        "price":10000 ,
+        "count": 10
     },
-    
-    
-    
-    
-    
+    {
+        "id" : 4,
+        "title": "landline",
+        "price":10000 ,
+        "count": 10
+    },
+    {
+        "id" : 5,
+        "title": "landline",
+        "price":10000 ,
+        "count": 10
+    }
     
     
     
