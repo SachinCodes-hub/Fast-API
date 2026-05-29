@@ -76,6 +76,9 @@ def tango(request:Request):
 #DTO - data transfer object
 
 
+
+# method to send data to the server like post it to server . 
+
 @app.post("/create_products")
 async def create_product(data:productDTO):
     data = data.model_dump() # model dump creates a dict like the key value pairs . 
@@ -86,6 +89,7 @@ async def create_product(data:productDTO):
 
 
 
+# HTTp method to upadate the existing data . 
 
 @app.put("/update_product/{product_id}")
 
@@ -96,3 +100,10 @@ async def update_prodcut(product_data:productDTO , product_id:int):
             return {"status":"product updated successfully"}
     
     return {"status":"product not found in the list !!!"}
+
+
+
+
+
+
+
