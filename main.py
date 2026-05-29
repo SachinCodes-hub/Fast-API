@@ -104,6 +104,13 @@ async def update_prodcut(product_data:productDTO , product_id:int):
 
 
 
+#HTTP method delete for deleting data . 
 
-
+@app.delete("/delete_product/{product_id}")
+def delete_product(product_id:int):
+    for index,oneproduct in enumerate(product):
+        if oneproduct.get("id") == product_id:
+            delete_product = product.pop(index)
+            return {"status":f"product deleted successfully !!{delete_product}"}
+    return {"product is not available in the product list !!! sorry !"}
 
